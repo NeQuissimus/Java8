@@ -3,6 +3,7 @@ package com.nequissimus.java8;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
@@ -33,6 +34,9 @@ final class Filtering {
     baseNull.add(null);
 
     System.out.println(predFilterStream(baseNull, notNull.and(p)));
+
+    // If only nulls need to be filtered out
+    System.out.println(baseNull.stream().filter(Objects::nonNull).collect(Collectors.toList()));
   }
 
   /**
