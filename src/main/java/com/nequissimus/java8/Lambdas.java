@@ -75,6 +75,5 @@ final class Lambdas {
     a = "world";
 
     pb.get();
-
   }
 }
