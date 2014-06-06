@@ -46,7 +46,8 @@ final class Filtering {
   * Use predicate to remove unwanted elements in-place
   */
   static void predRemove(List<String> l, Predicate<String> p) {
-    l.removeIf(p);
+    final Predicate<String> inverse = p.negate();
+    l.removeIf(inverse);
   }
 
   /**
