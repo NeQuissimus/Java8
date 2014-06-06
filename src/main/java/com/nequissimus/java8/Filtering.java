@@ -32,7 +32,7 @@ final class Filtering {
     final List<String> baseNull = new ArrayList<>(base);
     baseNull.add(null);
 
-    System.out.println(predFilterStream(base, notNull.and(p)));
+    System.out.println(predFilterStream(baseNull, notNull.and(p)));
   }
 
   /**
